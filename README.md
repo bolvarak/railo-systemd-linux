@@ -24,7 +24,6 @@ Just download the "Railo Server with Tomcat 7" installer from http://www.getrail
 
 Variables & Defaults
 ====================
-| ----------------------------- | --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | Name                          | Default                           | Description                                                                                                                         |
 | ----------------------------- | --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | PIDFile                       | /opt/railo/tomcat/work/tomcat.pid | This is Railo's process ID file                                                                                                     |
@@ -34,4 +33,4 @@ Variables & Defaults
 | Environment=RAILO_TOMCAT_HOME | /opt/railo/tomcat                 | This is the path to Tomcat 7 shipped with Railo                                                                                     |
 | Environment=RAILO_TOMCAT_BASE | /opt/railo/tomcat                 | This is the path to Tomcat 7 shipped with Railo                                                                                     |
 | Environment=RAILO_TOMCAT_TEMP | /opt/railo/tomcat/temp            | This is the path to Railo's temp directory                                                                                          |
-| ----------------------------- | --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+
