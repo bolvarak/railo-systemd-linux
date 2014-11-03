@@ -4,13 +4,13 @@ This service will be controlled by jsvc which adds an extra layer of security an
 
 ArchLinux
 ---------
-```bash
+```sh
 sudo pacman -S java-jsvc
 ```
 
 Debian Ubuntu & Mint
 --------------------
-```bash
+```sh
 sudo apt-get install jsvc
 ```
 
@@ -24,21 +24,21 @@ Just download the "Railo Server with Tomcat 7" installer from http://www.getrail
 
 Post Railo Installation
 =======================
-1. Make sure ```bash Environment=RAILO_USER``` is set to the user you specified in the Railo installer.
+1. Make sure ```sh Environment=RAILO_USER``` is set to the user you specified in the Railo installer.
 2. Ensure all the other paths and variables are correct.
 
 Service Installation
 ====================
 1.  Copy railo.service to your systemd/system directory:  
-  ```bash sudo cp railo.service /usr/lib/systemd/system/```
+  ```sh sudo cp railo.service /usr/lib/systemd/system/```
 2.  Enable the service:  
-  ```bash sudo systemctl enable railo``` 
+  ```sh sudo systemctl enable railo``` 
   or 
-  ```bash sudo systemctl enable railo.service```
+  ```sh sudo systemctl enable railo.service```
 3.  Start the service:  
-  ```bash sudo systemctl start railo``` 
+  ```sh sudo systemctl start railo``` 
   or 
-  ```bash sudo systemctl start railo.service```
+  ```sh sudo systemctl start railo.service```
 
 Variables & Defaults
 ====================
