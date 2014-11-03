@@ -1,0 +1,34 @@
+[Unit]
+Description=Railo CFML Engine
+After=network.target
+
+[Service]
+Type=forking
+PIDFile=/opt/railo/tomcat/work/tomcat.pid
+Environment=RAILO_USER=root
+Environment=RAILO_PID=/opt/railo/tomcat/work/tomcat.pid
+Environment=RAILO_JAVA_HOME=/opt/railo/jdk/jre
+Environment=RAILO_TOMCAT_HOME=/opt/railo/tomcat
+Environment=RAILO_TOMCAT_BASE=/opt/railo/tomcat
+Environment=RAILO_TOMCAT_TEMP=/opt/railo/tomcat/temp
+
+ExecStart=/usr/bin/jsvc \
+            -Dcatalina.home=${RAILO_TOMCAT_HOME} \
+            -Dcatalina.base=${RAILO_TOMCAT_BASE} \
+            -Djava.io.tmpdir=${RAILO_TOMCAT_TEMP} \
+            -cp /usr/share/java/commons-daemon.jar:${RAILO_TOMCAT_HOME}/bin/bootstrap.jar:${RAILO_TOMCAT_HOME}/bin/tomcat-juli.jar \
+            -user ${RAILO_USER} \
+            -java-home ${RAILO_JAVA_HOME} \
+            -pidfile ${RAILO_PID} \
+            -errfile SYSLOG \
+            -outfile SYSLOG \
+            $CATALINA_OPTS \
+            org.apache.catalina.startup.Bootstrap
+
+ExecStop=/usr/bin/jsvc \
+            -pidfile ${RAILO_PID} \
+            -stop \
+            org.apache.catalina.startup.Bootstrap
+
+[Install]
+WantedBy=multi-user.target
