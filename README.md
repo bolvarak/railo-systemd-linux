@@ -29,9 +29,16 @@ Post Railo Installation
 
 Service Installation
 ====================
-1.  Copy ```bash railo.service``` to your systemd/system directory:  ```bash sudo cp railo.service /usr/lib/systemd/system/```
-2.  Enable the service:  ```bash sudo systemctl enable railo``` or ```bash sudo systemctl enable railo.service```
-3.  Start the service:  ```bash sudo systemctl start railo``` or ```bash sudo systemctl start railo.service```
+1.  Copy railo.service to your systemd/system directory:  
+  ```bash sudo cp railo.service /usr/lib/systemd/system/```
+2.  Enable the service:  
+  ```bash sudo systemctl enable railo``` 
+  or 
+  ```bash sudo systemctl enable railo.service```
+3.  Start the service:  
+  ```bash sudo systemctl start railo``` 
+  or 
+  ```bash sudo systemctl start railo.service```
 
 Variables & Defaults
 ====================
